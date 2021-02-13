@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Aula.Domain\Aula.Domain.csproj" />
+    <ProjectReference Include="..\Aula.Infra.Data\Aula.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

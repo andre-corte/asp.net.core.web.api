@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aula.Domain\Aula.Domain.csproj" />
+    <ProjectReference Include="..\Aula.Infra.Data\Aula.Infra.Data.csproj" />
+    <ProjectReference Include="..\Aula.Services\Aula.Services.csproj" />
+  </ItemGroup>
+
 </Project>
