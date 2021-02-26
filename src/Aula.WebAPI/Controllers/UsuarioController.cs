@@ -65,7 +65,7 @@ namespace Aula.WebAPI.Controllers
         {
             _usuarioService.Atualizar(usuario);
             return Ok("Registro atualizado com sucesso");
-        } 
+        }  
 
         [HttpDelete("remover/{id}")]
         public IActionResult Delete(int id)
