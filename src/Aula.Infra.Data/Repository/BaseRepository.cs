@@ -19,9 +19,9 @@ namespace Aula.Infra.Data.Repository
 
         protected T Obter<T>(string sql, object data) where T : class
         {
-            return _dbConnection.QueryFirstOrDefault(sql, data, commandType: CommandType.Text);
+            return _dbConnection.QueryFirstOrDefault<T>(sql, data, commandType: CommandType.Text);
         }
-
+        
         protected void AdicionarOuAtualizar<T>(string sql, object data) where T : class
         {
             _dbConnection.ExecuteScalar(sql, data, commandType: CommandType.Text);

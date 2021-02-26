@@ -38,7 +38,17 @@ namespace Aula.WebAPI.Controllers
             Usuario usuario = _usuarioService.Obter(new Usuario
             {
                 Email = email,
-                Id = string.IsNullOrWhiteSpace(id) ? 0 : long.Parse(id)
+                Id = string.IsNullOrWhiteSpace(id) ? 0 : int.Parse(id)
+            });
+            return Ok(usuario);
+        }
+
+        [HttpGet("obter-por/{id}")]
+        public IActionResult ObterPor(int id)
+        {
+            Usuario usuario = _usuarioService.ObterPor(new Usuario
+            {
+                Id = id
             });
             return Ok(usuario);
         }
@@ -58,7 +68,7 @@ namespace Aula.WebAPI.Controllers
         }
 
         [HttpDelete("remover/{id}")]
-        public IActionResult Delete(long id)
+        public IActionResult Delete(int id)
         {
             _usuarioService.Remover(new Usuario { Id = id });
             return Ok("Registro removido com sucesso");

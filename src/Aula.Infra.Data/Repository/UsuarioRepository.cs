@@ -30,6 +30,13 @@ namespace Aula.Infra.Data.Repository
             return base.Obter<Usuario>(sql, obj);
         }
 
+        public Usuario ObterPor(Usuario obj)
+        {
+            string sql = $"select * from Usuario where Id = @Id;";
+
+            return base.Obter<Usuario>(sql, obj);
+        }
+
         public void Adicionar(Usuario obj)
         {
             string sql = $"insert into Usuario (Nome, Email, Senha, DataCadastro, ResponsavelCadastro, Ativo) " +

@@ -15,9 +15,9 @@ namespace Aula.WebAPI.Controllers
             return HttpContext.Request.Query.ContainsKey(name) ? HttpContext.Request.Query[name].ToString() : "";
         }
 
-        protected long GetSearchIntParameters(string name)
+        protected int GetSearchIntParameters(string name)
         {
-            return long.Parse(HttpContext.Request.Query.ContainsKey(name) ? HttpContext.Request.Query[name].ToString() : "0");
+            return int.Parse(HttpContext.Request.Query.ContainsKey(name) ? HttpContext.Request.Query[name].ToString() : "0");
         }
     }
 }

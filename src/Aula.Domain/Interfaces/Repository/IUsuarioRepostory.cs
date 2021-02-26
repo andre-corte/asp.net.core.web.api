@@ -9,6 +9,7 @@ namespace Aula.Domain.Interfaces.Repository
     {
         IEnumerable<Usuario> Listar(Usuario obj);
         Usuario Obter(Usuario obj);
+        Usuario ObterPor(Usuario obj);
         Usuario Login(Usuario obj);
         void Adicionar(Usuario obj);
         void Atualizar(Usuario obj);

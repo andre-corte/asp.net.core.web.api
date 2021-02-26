@@ -45,6 +45,11 @@ namespace Aula.Services.Services
         {
             return _usuarioRepository.Obter(obj);
         }
+        
+        public Usuario ObterPor(Usuario obj)
+        {
+            return _usuarioRepository.ObterPor(obj);
+        }
 
         public void Remover(Usuario obj)
         {
